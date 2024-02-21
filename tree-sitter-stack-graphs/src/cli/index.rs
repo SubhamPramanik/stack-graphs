@@ -371,7 +371,7 @@ impl<'a> Indexer<'a> {
                 }
                 _ => {
                     file_status.failure("failed to build stack graph", Some(&err.display_pretty()));
-                    return Err(IndexError::StackGraph);
+                    return Ok(());
                 }
             }
         };
