@@ -42,7 +42,7 @@ pub struct QueryArgs {
     pub stats: bool,
 
     #[clap(subcommand)]
-    target: Target,
+    pub target: Target,
 }
 
 impl QueryArgs {
