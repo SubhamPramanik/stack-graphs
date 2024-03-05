@@ -803,9 +803,12 @@ inherit .parent_module
   attr (@param.output) push_node = @param
 }
 
-(parameters
-  (_) @param) @params
-{
+[
+  (parameters
+    (_) @param) @params
+    (lambda_parameters
+      (_) @param) @params
+] {
   node @param.param_index
   node @param.param_name
 
